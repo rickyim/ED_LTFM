@@ -12,7 +12,7 @@ y2=y(:,1:end/2,:);
 y(:,1:end/2,:)=y1;
 y(:,end/2+1:end,:)=y2;
 clear y1 y2 
-
+sizex=[sx,sz];
 %FFT of psf
 fft_psf=fftn(ifftshift(h));
 hsum=sum(fft_psf.*conj(fft_psf), 2);
